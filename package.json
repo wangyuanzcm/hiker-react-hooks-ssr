@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyuanzcm/hiker-react-hooks-ssr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangyuanzcm/hiker-react-hooks-ssr/issues"
+  },
+  "homepage": "https://github.com/wangyuanzcm/hiker-react-hooks-ssr#readme"
 }
