@@ -33,6 +33,10 @@
             new ModuleConcatPlugin(), //开启scope Hoisting
         ],
         ```
+    - [ ] web可视化查看构建分析：[性能优化篇---Webpack构建速度优化](https://segmentfault.com/a/1190000018493260)
+        > 输出Webpack构建信息的.json文件：webpack --profile --json > stats.json
+        > 借助webpack-bundle-analyzer工具在CI工具里面实现可视化查看
+
 - 开发优化
     - [ ] 接入错误监控系统
     - [ ] 打包文件直接上传测试服务器
@@ -66,7 +70,8 @@
     }));
     ```
     - [ ] 使用中间件记录每次服务器响应的时间，及请求的信息打印在日志里面
-        > 打印日志是否会影响服务器的性能？
+        > 打印日志是否会影响服务器的性能？[Koa日志中间件封装开发](https://segmentfault.com/a/1190000018433489)
+        > 日志持久化存储和定期删除
     - [ ] 在后端设置缓存，
         - [ ] 使用redis对重复的接口进行缓存，参考文档：[Redis + Node.js: 请求缓存](https://blog.csdn.net/bdss58/article/details/53590393)
             >  是否可用？待尝试
@@ -90,3 +95,4 @@
 ## 参考文档：
 - [同构渲染](https://zhuanlan.zhihu.com/p/114275951Node)
 - [性能优化篇---Webpack构建代码质量压缩](https://segmentfault.com/a/1190000018644992)
+- [性能优化篇---Webpack构建速度优化](https://segmentfault.com/a/1190000018493260)
