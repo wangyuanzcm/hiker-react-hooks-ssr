@@ -22,7 +22,17 @@
         > 如何添加hash？如何保证添加hash之后服务器可以读取到最新的文件？尚未完成   
         > 可以参考文档：[webpack分包分析及SplitChunksPlugin实用指南](https://www.jianshu.com/p/65d8f9a2986e)  
         > 还有这个文档（[webpack独立打包与缓存处理](https://segmentfault.com/a/1190000008912289)），api已经过期，但是还是可以参考。
-
+    - [ ] 开启Scope Hoistion,即作用域提升;
+        > 原理：分析模块间的依赖关系，尽可能的将零散的模块合并到一个函数中去，前提不能造成代码冗余，因此只有被引用了一次的模块才能被合并。
+        > 接入好处：  
+        > - 代码体积减少  
+        > - 代码在运行时因为创建的函数作用域更少了，内存开销也随之变小
+        ```
+        const ModuleConcatPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin');
+        plugins: [
+            new ModuleConcatPlugin(), //开启scope Hoisting
+        ],
+        ```
 - 开发优化
     - [ ] 接入错误监控系统
     - [ ] 打包文件直接上传测试服务器
@@ -34,7 +44,8 @@
         > `<meta http-equiv="Expires" content="Mon, 20 Jul 2013 23:00:00 GMT" />`  
     - [ ] 使用splitChunks将react，react-dom单独分割加载，这部分框架代码可以缓存到用户浏览器上面，实现复用
         > splitChunks相对之前到common模块的优势：chunks（以及内部导入的模块）是通过内部 webpack 图谱中的父子关系关联的。CommonsChunkPlugin 曾被用来避免他们之间的重复依赖，但是不可能再做进一步的优化
-
+    - [ ] 对于git commit进行处理，在提交代码之前进行代码静态检查
+        > 这里需要eslint
 
 - 代码优化
     - [ ] 接入treeShaking，删除无用代码,待尝试
