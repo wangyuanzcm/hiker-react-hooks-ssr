@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "client:watch": "webpack serve --config ./build/webpack.client.dev.js",
+    "server:watch": "nodemon ./src/server/app.js",
     "client:dev": "webpack --config ./build/webpack.client.dev.js",
     "server:dev": "webpack --config ./build/webpack.server.dev.js",
-    "dev:build": "yarn client:dev && yarn server:dev",
-    "dev:server": "nodemon ./src/server/app.js"
+    "dev": "rm -rf ./dist && yarn client:dev && yarn server:dev"
   },
   "keywords": [],
   "author": "",
@@ -26,10 +26,12 @@
     "@koa/router": "^10.0.0",
     "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
+    "compression-webpack-plugin": "^7.1.2",
     "css-loader": "^5.2.0",
     "html-webpack-plugin": "^5.3.1",
     "koa": "^2.13.1",
     "koa-static": "^5.0.0",
+    "koa-static-cache": "^5.1.4",
     "mini-css-extract-plugin": "^1.4.0",
     "nodemon": "^2.0.7",
     "react": "^17.0.2",
@@ -43,9 +45,13 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.13.13",
+    "html-webpack-externals-plugin": "^3.8.0",
     "ignore-loader": "^0.1.2",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
-    "webpack-node-externals": "^2.5.2"
+    "webpack-node-externals": "^2.5.2",
+    "webpack-parallel-uglify-plugin": "^2.0.0"
   }
 }

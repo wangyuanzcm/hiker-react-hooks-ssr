@@ -25,6 +25,7 @@ const About = () => {
       });
     }
   }, []);
+  // console.log(name,"name---")
   return (
     <div className="about">
       <h2>about页面</h2>
