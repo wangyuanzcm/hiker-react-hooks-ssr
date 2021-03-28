@@ -92,6 +92,17 @@
 - [ ] 构建的时候对包的体积进行分析
     分析：是否提供一个单独的命令对webpack打成的包进行分析
 
+## sonar静态代码检查
+
+进入网站启动sonar服务，进行代码静态检查，同时可以集成单元测试
+
+这个可以封装到cli工具里面，仅提供sonar-scanner的demo配置文件，具体的话还是需要自己去使用
+免费版无法跟git集成使用
+扫描命令：
+```
+sonar-scanner
+```
+
 ## 参考文档：
 - [同构渲染](https://zhuanlan.zhihu.com/p/114275951Node)
 - [性能优化篇---Webpack构建代码质量压缩](https://segmentfault.com/a/1190000018644992)
