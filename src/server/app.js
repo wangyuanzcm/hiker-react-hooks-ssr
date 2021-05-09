@@ -13,9 +13,6 @@ app.use(async (ctx, next) => {
   console.log(`请求地址: ${ctx.path}，响应时间：${endTime - stime}ms`);
 });
 
-const router = require("./router");
-router(app);
-
 // app.use(server(resolve(__dirname,'../../dist')));
 app.use(
   staticCache(resolve(__dirname, "../../dist"), {
@@ -24,6 +21,10 @@ app.use(
     dynamic: true,
   })
 );
+const router = require("./router");
+router(app);
+
+
 app.listen(3000, () => {
   console.log("running 3000");
 });

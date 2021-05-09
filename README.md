@@ -1,5 +1,7 @@
 # hiker-react-hooks-ssr
 
+react同构的原型项目
+
 主要技术栈：`react hooks`,`koa`,`webpack`
 
 ## 实现目标：  
