@@ -12,6 +12,7 @@ react同构的原型项目
 
 ## 项目优化
 - 打包优化：
+    - [ ] 缓存打包中间产物,[Webpack v4编译速度优化实践](https://www.cnblogs.com/rock-roll/p/12093553.html)
     - [ ] 将常用库（react,react-dom）单独打包,以便于文件缓存重用
     - [ ] 在wepack中使用使用多线程加快打包速度
     ```
